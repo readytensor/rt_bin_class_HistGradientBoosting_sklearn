@@ -105,11 +105,7 @@ class Classifier:
         Returns:
             numpy.ndarray: The predicted class probabilities.
         """
-        decision_values = self.model.decision_function(inputs)
-        prob_positive_class = 1 / (1 + np.exp(-decision_values))
-        prob_negative_class = 1 - prob_positive_class
-        probabilities = np.vstack([prob_negative_class, prob_positive_class]).T
-        return probabilities
+        return self.model.predict_proba(inputs)
 
     def evaluate(self, test_inputs: pd.DataFrame, test_targets: pd.Series) -> float:
         """Evaluate the HistGradientBoosting binary classifier and return the accuracy.
