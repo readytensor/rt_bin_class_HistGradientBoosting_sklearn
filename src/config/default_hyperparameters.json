@@ -1,5 +1,5 @@
 {
- "loss": "squared_error",
+ "loss": "log_loss",
   "learning_rate": 0.1,
   "max_depth": null,
   "max_leaf_nodes": 31,

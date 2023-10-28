@@ -2,13 +2,6 @@
   "num_trials": 50,
   "hyperparameters": [
     {
-      "loss": "loss",
-      "short_desc": "The loss function to use in the boosting process.",
-      "default": "squared_error",
-      "type": "categorical",
-      "categories": ["squared_error", "absolute_error", "gamma", "poisson", "quantile"]
-    },
-    {
       "name": "learning_rate",
       "short_desc": "The learning rate, also known as shrinkage.",
       "type": "float",
